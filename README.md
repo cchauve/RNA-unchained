@@ -4,38 +4,32 @@
 
 
 RNA-unchained (Chaining sequence/structure seeds for computing RNA similarity)
-find seeds of pattern matching between an RNA query and other RNA) to boost the
-alignment of these RNA.  RNAunchained explicitly chains and aligns based
-on both RNA sequence and structure. It compute pairwise analyse between a query
-and the computed RNA index database.
+aims at detecting structural homologs of a given query RNA sequence in a, potentially
+large, collection of RNA structures.
 
+Details of the algorithm can be found at http://www.ncbi.nlm.nih.gov/pubmed/25768236
 
 RNA-unchained consists of three steps:
 
-(1) The constitution of an index of RNA which contains for each RNA
-	all computed seeds. These index can deal with multiple seeds size
-	and can be modified by adding new RNA.
+(1) The computation of an index of RNA which contains for each RNA
+	all identified seeds. This index can deal with multiple seeds size
+	and can be modified to add new RNA.
 (2) Given a file containing one or multiple query it finds all common
 	seeds between query and RNAs of the index and compute the corresponding
-	anchor. Multiple chaining options are available. A file of constraints for 
-	each pairwise analyse is computed. 
-(3) Given the constraints file of the pairwise chaining a pairwise
-	alignment is done with Locarna. The alignment is computed only if
-	there is an anchor between 
-
-The chaining filter algorithm restricts the search space of alignments by computing
-a file of constraints between both RNAs to align.
-
+	anchor (chain of seeds). 
+(3) Given the chain, a constrained alignment is performed by the Locarna software. 
+        The alignment is computed only if there is t least one anchor between 
+        the two considered RNAs.
 
 Version: 1.0
 Contact: Laetitia Bourgeade, laetitia.bourgeade@labri.fr
-
+         Cedric Chauve, cedric.chauve@sfu.ca  
 
 -----------------------------------------------------------------------------------
                             INSTALL
 -----------------------------------------------------------------------------------
 
-Run RNA-unchained with python v2.7 or higher but not python v3.0 or higher.  No other
+RNA-unchained runs with python v2.7 or higher but not python v3.0 or higher.  No other
 compilation is necessary, except installing and configuring other packages.
 
 The following software packages are required
