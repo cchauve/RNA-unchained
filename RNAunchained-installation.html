@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>RNA-unchained: Chaining sequence/structure seeds for computing RNA similarity</title>
+
+<!-- include styles -->
+<style type="text/css">
+	#container {
+	width:800px;
+	margin:auto;
+	}
+</style>
+
+</head>
+<body>
+
+<div id="container">
+<h1>RNA-unchained: Chaining sequence/structure seeds for computing RNA similarity</h1>
+
+RNA-unchainedfind seeds of pattern matching between an RNA query and other RNA) to 
+boost the alignment of these RNA.  RNAunchained explicitly chains and aligns based
+on both RNA sequence and structure. It compute pairwise analyse between a query
+and the computed RNA index database.
+
+<h2> Installation Instructions </h2> 
+
+Run RNA-unchained with python v2.7 or higher but not python v3.0 or higher.  No other
+compilation is necessary, except installing and configuring other packages.
+
+<ul>
+<li> ViennaRNA v2.1.1 or higher           
+</li><li> LocARNA v1.7.6 
+</li>
+</ul>
+
+To install RNA-unchained in a UNIX environment, please follow these simple instructions:
+<ol>
+  <li>Install the ViennaRNA package (at least version 2.1.1)
+  (<a href="http://www.tbi.univie.ac.at/RNA/">Download
+  Vienna RNA package</a>).</li>
+  <p></p>
+  <li>
+    Install Locarna 1.7.6 (<a href="http://www.bioinf.uni-freiburg.de/Software/LocARNA/Releases/">Download Locarna</a>)
+  <p></p>
+  </li>
+  <li>
+    Download <a href="RNA-unchained.tar.gz">RNA-unchained.tar.gz</a>.  Extract
+    the contents into a directory by running the command
+    <p>
+      tar xvzf RNAunchained.tar.gz
+    </p>
+  
+    Run RNA-unchained on a fasta file with the command
+    <p>
+    RNA-unchained.py [options]
+    </p>
+    To see a list of options for RNAunchained.py, run it with the --help or -h option. Please refer to the included README for further details on using RNAunchained and a description of output files.
+  </li>
+  <p></p>
+  <li>
+   In order to test that RNAunchained and all packages were installed correctly, we have provided a fasta file 'test.fa' in the archive. As an example run RNAunchained on test.fa with the following command to obtain all vs all alignments with the two RNA-unchained options (seed and anchor optimizations):
+    <p>
+    python RNA-unchained.py -m -db TEST test.fa
+
+    </p>
+    <p>
+    python RNA-unchained.py -c -rfb -epc -db TEST test.fa
+    </p>
+    <p>
+    python RNA-unchained.py -a -rfb -epc -db TEST test.fa
+    </p>
+    RNAunchained will align using Locarna with constraints. Finally, RNAunchained will output 'chaining_alignment_options.txt' and 'chaining_score_options.txt' that contains alignments and score of alignments and 'name_options_constraints.txt' that contains tree chaining constraints.
+  </li>
+</div>
+</body>
+</html>
+
+
