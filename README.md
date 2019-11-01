@@ -1,7 +1,4 @@
------------------------------------------------------------------------------------
-                       RNA-unchained v1.0 Overview
------------------------------------------------------------------------------------
-
+# RNA-unchained v1.0 Overview
 
 RNA-unchained (Chaining sequence/structure seeds for computing RNA similarity)
 aims at detecting structural homologs of a given query RNA sequence in a, potentially
@@ -25,9 +22,7 @@ Version: 1.0
 Contact: Laetitia Bourgeade, laetitia.bourgeade@labri.fr
          Cedric Chauve, cedric.chauve@sfu.ca  
 
------------------------------------------------------------------------------------
-                            INSTALL
------------------------------------------------------------------------------------
+# INSTALL
 
 RNA-unchained runs with python v2.7 or higher but not python v3.0 or higher.  No other
 compilation is necessary, except installing and configuring other packages.
@@ -47,9 +42,7 @@ when installed as root, you have to add the path in the shell path.
 You can use directly RNA-unchained by adding the path of RNA-unchained folder in
 the shell path.
 
--------------------------------------------------------------------------
-                            USAGE
--------------------------------------------------------------------------
+# USAGE
 
 Chaining in sequence and structure RNAs before aligning them:
 
@@ -95,11 +88,8 @@ optional arguments:
 
 
 
-
--------------------------------------------------------------------------
-                               Output
--------------------------------------------------------------------------
-
+# Output
+ 
 RNA-unchained will generate the following files in the folder with the name
 of the index db (if no name given a random one is used)
 
